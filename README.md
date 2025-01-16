@@ -33,6 +33,12 @@ JWT_SECRET=jwt_secret
 RESET_SECRET=reset_secret
 ```
 
+For a Dockerized setup, the MongoDB URI changes to:
+
+```bash
+MONGO_URI=mongodb://mongo_db:27017/product_store
+```
+
 ## 4. Run API
 
 To run API:
