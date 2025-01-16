@@ -21,7 +21,19 @@ Make sure you have npm installed, then run:
 npm install
 ```
 
-## 3. Run API
+## 3. Setting Up the .env File
+
+Before running the application, you need to configure environment variables. Create a .env file at the root of your project and add the following variables:
+
+```bash
+PORT=7000
+NODE_ENV=development
+MONGO_URI=mongodb://localhost:27017/product_store
+JWT_SECRET=jwt_secret
+RESET_SECRET=reset_secret
+```
+
+## 4. Run API
 
 To run API:
 
@@ -29,15 +41,15 @@ To run API:
 npm run start
 ```
 
-## 4. Containerize the Application
+## 5. Containerize the Application
 
 If you want to containerize the application using Docker, follow the steps below:
 
-### 4.1. Install Docker
+### 5.1. Install Docker
 
 Make sure Docker is installed on your machine. If not, you can follow the installation guide on [Docker Website](https://www.docker.com/products/docker-desktop/)
 
-### 4.2. Build the Docker Image
+### 5.2. Build the Docker Image
 
 Run the following command to build the Docker image:
 
@@ -45,7 +57,7 @@ Run the following command to build the Docker image:
 docker build -t product-store-api .
 ```
 
-### 4.3. Check Docker Containers
+### 5.3. Check Docker Containers
 
 To see if the Docker container was successfully built, run:
 
@@ -53,7 +65,7 @@ To see if the Docker container was successfully built, run:
 docker ps -a
 ```
 
-### 4.4. Start the Docker Container
+### 5.4. Start the Docker Container
 
 To run the Docker container:
 
@@ -63,7 +75,7 @@ docker-compose up
 
 The API should now be running within the Docker container.
 
-## 5. Running Tests
+## 6. Running Tests
 
 To run the test cases for the API, use the following command:
 
